@@ -35,36 +35,36 @@ const typingPhrases = [
 
 const chatResponses = {
   "bằng cấp & học vấn bách khoa": {
-    answer: "Tôi tốt nghiệp Bằng Kỹ Sư Công Nghệ Thông Tin loại GIỎI (tháng 09/2024) tại Khoa Công nghệ Thông tin Việt Nhật (HEDSPI), Trường CNTT & Truyền thông (SoICT), Đại học Bách Khoa Hà Nội.\n\nChương trình học rèn luyện nền tảng toán giải thuật vững chắc, tư duy thiết kế phần mềm bài bản và tác phong làm việc chuẩn mực, cẩn thận của kỹ sư theo định hướng Nhật Bản.",
-    source: "Học Vấn"
+    answer: "Tôi tốt nghiệp chương trình Kỹ sư Công nghệ thông tin, xếp loại Giỏi (tháng 09/2024) tại Khoa Công nghệ thông tin Việt - Nhật (HEDSPI), Trường CNTT & Truyền thông (SoICT), Đại học Bách Khoa Hà Nội.\n\nChương trình học rèn luyện nền tảng toán giải thuật vững chắc, tư duy thiết kế phần mềm bài bản và tác phong làm việc chuẩn mực, cẩn thận của kỹ sư theo định hướng Nhật Bản.",
+    source: "Học vấn"
   },
   "kinh nghiệm làm việc thực tế": {
-    answer: "Quá trình làm việc thực tế của tôi:\n\n• 08/2024 - Hiện tại: PVI (Trung tâm CNTT) - Vị trí Web/App Fullstack. Thực tập/thử việc từ 08/2024, ký hợp đồng chính thức từ 11/2024.\n• 12/2022 - 05/2023: Rikkeisoft - Thực tập sinh Frontend Dev (môi trường quy chuẩn Nhật Bản).\n• Năm 2022: MK Technology - Thực tập sinh Mobile Dev (công nghệ thẻ & bảo mật).",
-    source: "Kinh Nghiệm"
+    answer: "Quá trình làm việc thực tế của tôi:\n\n• 08/2024 - Hiện tại: PVI (Trung tâm CNTT) - Vị trí Web/App Fullstack Developer (nhân viên chính thức từ 11/2024). Tham gia phát triển, nâng cấp và bảo trì 4 hệ thống nghiệp vụ thực tế, hoàn thành hơn 20 chức năng/màn hình và API.\n• 12/2022 - 05/2023: Rikkeisoft - Thực tập sinh Frontend Dev (môi trường quy chuẩn Nhật Bản).\n• Năm 2022: MK Technology - Thực tập sinh Mobile Dev (công nghệ thẻ & bảo mật).",
+    source: "Kinh nghiệm"
   },
   "cách tiếp cận & ứng dụng ai": {
-    answer: "Quan điểm của tôi về AI là 'Công cụ trợ lực có kiểm chứng':\n\n• Tôi sử dụng AI để hỗ trợ đọc nhanh các luồng mã nguồn kế thừa, hỗ trợ vẽ sơ đồ quan hệ cơ sở dữ liệu lớn.\n• Tôi tự viết script/skill kiểm thử (như Custom Skill 'pre-push-tester') để tự động hóa khâu kiểm tra định dạng file (UTF-8 BOM/CRLF) và rà soát git diff trước khi commit.\n• Dùng AI sinh boilerplate để tiết kiệm thời gian, tập trung trí lực vào giải quyết các bài toán nghiệp vụ tái bảo hiểm phức tạp và kiểm chứng tính toàn vẹn của dữ liệu.",
-    source: "Ứng Dụng AI"
+    answer: "Quan điểm của tôi về AI là 'Công cụ trợ lực có kiểm chứng':\n\n• Tôi sử dụng AI để hỗ trợ đọc hiểu nhanh các luồng mã nguồn kế thừa và tóm tắt cấu trúc phụ thuộc.\n• Tôi tự xây dựng kịch bản kiểm thử (Custom Skill 'pre-push-tester') để tự động hóa khâu kiểm tra định dạng mã nguồn (UTF-8 BOM, CRLF) và rà soát git diff trước khi đẩy code lên kho lưu trữ chung (pre-push).\n• Dùng AI tạo các đoạn mã khung (boilerplate) để tiết kiệm thời gian, tập trung trí lực vào xử lý nghiệp vụ và kiểm chứng tính toàn vẹn của dữ liệu.",
+    source: "Ứng dụng AI"
   },
   "kinh nghiệm với các phần mềm hà nội re": {
-    answer: "Tại PVI, tôi trực tiếp tham gia phát triển, bảo trì và nắm chắc nghiệp vụ của 4 hệ thống phục vụ Hà Nội Re:\n\n1. ReSmart (React Native App & API): Ứng dụng điều hành di động, phê duyệt điện tử (Approve, e-Pen), tra cứu e-SOA, e-Slip, e-Claim, báo cáo công nợ (Debt Report).\n2. Web.SOA_DienTu (ASP.NET MVC & C#): Quản lý hồ sơ Bảng kê tài khoản 2 chiều SOA OW và SOA IW, import Excel / nhập lẻ, theo dõi Query, Settlement, đóng gói tải file hồ sơ.\n3. Web Contract Review (.NET 10 & React 19): Quản lý HĐ nhận tái (11 loại chứng từ FAC & TTY), mô hình 5 bảng hạt nhân, tích hợp Interactive PDF & AI Review ánh xạ trường dữ liệu, chạy song song và đồng bộ dữ liệu với phần mềm WinForms.\n4. PVIRE2022 (VB.NET WinForms): Hệ thống lõi kế thừa nhiều năm, quản trị dữ liệu lịch sử và logic nghiệp vụ tái bảo hiểm cốt lõi.\n\nTôi sẵn sàng trao đổi chi tiết về kiến trúc kỹ thuật và nghiệp vụ thực tế của các hệ thống trên. Số điện thoại liên hệ: 0386 832 065.",
-    source: "Dự Án Hà Nội Re"
+    answer: "Tại PVI, tôi tham gia phát triển, nâng cấp và bảo trì 4 hệ thống nghiệp vụ quan trọng phục vụ Hà Nội Re:\n\n1. Ứng dụng di động ReSmart (Phát triển tính năng & nâng cấp): Phục vụ điều hành, phê duyệt điện tử, tra cứu thông tin nghiệp vụ và xem báo cáo trên thiết bị di động.\n2. Hệ thống SOA điện tử - e-SOA (Nâng cấp & bảo trì Production): Quản lý, đối chiếu bảng kê tài khoản, tối ưu hóa truy vấn đối soát và hỗ trợ xử lý dữ liệu vận hành.\n3. Hệ thống Quản lý & Rà soát hợp đồng - Web Contract Review (Phát triển mới / Hiện đại hóa): Xây dựng giao diện Web, API nghiệp vụ và thử nghiệm tích hợp AI/OCR hỗ trợ bóc tách thông tin từ tài liệu PDF.\n4. Hệ thống Quản trị nghiệp vụ lõi - PVIRe2022 (Bảo trì & hỗ trợ vận hành): Bảo trì mã nguồn, xử lý yêu cầu kỹ thuật phát sinh và đảm bảo đồng bộ dữ liệu.\n\nTôi sẵn sàng trao đổi chi tiết trực tiếp trong phỏng vấn chuyên môn. Số điện thoại liên hệ: 0386 832 065.",
+    source: "Dự án Hà Nội Re"
   }
 };
 
 const defaultChatReply = {
-  answer: "Bạn có thể hỏi tôi về: Bằng cấp Bách Khoa, Kinh nghiệm làm việc, Công nghệ sử dụng, Cách tôi ứng dụng AI vào công việc, hoặc Kinh nghiệm thực tế với các phần mềm ReSmart, SOA, Contract Review của Hà Nội Re.",
-  source: "Trợ Lý Hồ Sơ"
+  answer: "Bạn có thể hỏi tôi về: Bằng cấp Bách Khoa, Kinh nghiệm làm việc, Công nghệ sử dụng, Cách tôi ứng dụng AI vào công việc, hoặc Kinh nghiệm tham gia các phần mềm nghiệp vụ của Hà Nội Re.",
+  source: "Trợ lý hồ sơ"
 };
 
 const terminalResponses = {
-  whoami: "Hoàng Đức Thiện (SN 27/07/2001, Hà Nội). Kỹ sư CNTT Bằng Giỏi ĐH Bách Khoa Hà Nội. Vị trí: Web/App Fullstack Developer.",
-  education: "Bằng Kỹ Sư CNTT Xếp loại Giỏi (09/2024) - Khoa CNTT Việt Nhật (HEDSPI), Trường CNTT & TT, ĐH Bách Khoa Hà Nội.",
-  experience: "08/2024 - Nay: PVI (Trung tâm CNTT, Chính thức 11/2024) | 12/2022 - 05/2023: Rikkeisoft (FE Dev) | 2022: MK Tech (Mobile Dev).",
-  skills: "Backend (.NET, C#, VB.NET, Web API), Frontend (JS, TS, React, HTML/CSS), CSDL (SQL Server, Oracle, Stored Procedures), Kiểm thử & Rà soát mã nguồn.",
-  "ai-tools": "Tận dụng AI để tăng năng suất: Đọc hiểu code cũ, sinh boilerplate và tự viết tool/skill kiểm tra git diff, định dạng UTF-8 BOM/CRLF trước khi release.",
-  projects: "1. ReSmart (React Native App điều hành, phê duyệt, e-SOA/e-Slip/e-Claim) | 2. Web.SOA_DienTu (ASP.NET MVC quản lý SOA OW/IW, import Excel, đối soát) | 3. Web Contract Review (.NET 10 + React 19, 11 loại ctu FAC/TTY, AI Review PDF, side-by-side WinForms) | 4. PVIRE2022 (Core WinForms VB.NET & SQL Server).",
-  hanoire: "Kinh nghiệm thực tế phát triển & vận hành 4 hệ thống: ReSmart, Web.SOA_DienTu, Web Contract Review, PVIRE2022. Liên hệ: 0386 832 065.",
+  whoami: "Hoàng Đức Thiện (SN 27/07/2001, Hà Nội). Kỹ sư CNTT xếp loại Giỏi - ĐH Bách Khoa Hà Nội. Vị trí: Web/App Fullstack Developer.",
+  education: "Tốt nghiệp chương trình Kỹ sư CNTT, xếp loại Giỏi (09/2024) - Khoa CNTT Việt - Nhật (HEDSPI), Trường CNTT & TT, ĐH Bách Khoa Hà Nội.",
+  experience: "08/2024 - Nay: PVI (Trung tâm CNTT, chính thức 11/2024) | 12/2022 - 05/2023: Rikkeisoft (FE Dev) | 2022: MK Tech (Mobile Dev).",
+  skills: "Backend (.NET, C#, VB.NET, Web API), Frontend (JS, TS, React, HTML/CSS, React Native), CSDL (SQL Server, Oracle, Stored Procedures), Kiểm thử & rà soát mã nguồn.",
+  "ai-tools": "Tận dụng AI có kiểm chứng: Hỗ trợ đọc hiểu code cũ, tạo boilerplate và xây dựng kịch bản kiểm tra git diff, định dạng UTF-8 BOM/CRLF trước khi đẩy code (pre-push).",
+  projects: "Tham gia phát triển & bảo trì 4 hệ thống nghiệp vụ: 1. Ứng dụng di động ReSmart | 2. Hệ thống SOA điện tử (e-SOA) | 3. Web Contract Review (Quản lý HĐ & thử nghiệm AI/OCR) | 4. Hệ thống nghiệp vụ lõi PVIRe2022.",
+  hanoire: "Tham gia phát triển, nâng cấp và bảo trì vận hành 4 hệ thống: ReSmart, e-SOA, Web Contract Review, PVIRe2022. Liên hệ: 0386 832 065.",
   contact: "Hoàng Đức Thiện | SĐT & Zalo: 0386 832 065 | Địa chỉ: Hà Nội.",
   help: "Danh sách lệnh: whoami, education, experience, skills, ai-tools, projects, hanoire, contact, clear, exit"
 };
