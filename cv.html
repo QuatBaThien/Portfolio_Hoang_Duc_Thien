@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Hoàng Đức Thiện | Fullstack Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      background: #ffffff;
+      color: #1e293b;
+      font-size: 8.8pt;
+      line-height: 1.38;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Outer Container */
+    .cv-page {
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+
+    /* ================= HEADER ================= */
+    .cv-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #31101e 100%);
+      color: #ffffff;
+      padding: 18px 24px 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 3px solid #dc2626;
+    }
+
+    .header-avatar {
+      width: 78px;
+      height: 78px;
+      min-width: 78px;
+      border-radius: 50%;
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .header-title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .header-name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .header-badge {
+      background: rgba(220, 38, 38, 0.25);
+      border: 1px solid rgba(248, 113, 113, 0.45);
+      color: #fecaca;
+      font-size: 7.2pt;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .header-role {
+      font-size: 9.8pt;
+      font-weight: 600;
+      color: #f87171;
+      margin-top: 3px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .header-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 8px;
+      font-size: 7.8pt;
+      color: #cbd5e1;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-pill svg {
+      width: 11px;
+      height: 11px;
+      stroke: #f87171;
+      stroke-width: 2.2;
+      fill: none;
+    }
+
+    .contact-pill a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ================= MAIN CONTENT 2 COLUMNS ================= */
+    .cv-body {
+      display: flex;
+      flex: 1;
+      height: calc(297mm - 120px);
+    }
+
+    /* LEFT SIDEBAR (~33%) */
+    .sidebar {
+      width: 68mm;
+      min-width: 68mm;
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      padding: 15px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    /* RIGHT COLUMN (~67%) */
+    .content {
+      flex: 1;
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #ffffff;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 8.8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid #e2e8f0;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1.5px;
+      width: 24px;
+      height: 1.5px;
+      background: #dc2626;
+    }
+
+    .section-title svg {
+      width: 12px;
+      height: 12px;
+      stroke: #dc2626;
+      stroke-width: 2.2;
+      fill: none;
+    }
+
+    /* Education Block */
+    .edu-item {
+      margin-top: 5px;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 8.6pt;
+      color: #0f172a;
+    }
+
+    .edu-school {
+      font-size: 7.9pt;
+      color: #dc2626;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .edu-meta {
+      font-size: 7.4pt;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .edu-desc {
+      font-size: 7.4pt;
+      color: #475569;
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    /* Skills Groups */
+    .skill-group {
+      margin-top: 5px;
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      font-size: 7.8pt;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 3px;
+    }
+
+    .skill-cat::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background: #dc2626;
+      border-radius: 50%;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5px;
+    }
+
+    .skill-tag {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 1.5px 6px;
+      border-radius: 4px;
+      font-size: 7.1pt;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .skill-tag.highlight {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #b91c1c;
+      font-weight: 600;
+    }
+
+    /* AI Tools Callout */
+    .ai-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 2.5px solid #dc2626;
+      border-radius: 4px;
+      padding: 6px 8px;
+      margin-top: 4px;
+      font-size: 7.3pt;
+      color: #334155;
+      line-height: 1.34;
+    }
+
+    /* Summary Box */
+    .summary-text {
+      font-size: 8.2pt;
+      color: #334155;
+      line-height: 1.42;
+      background: #f8fafc;
+      border-left: 3px solid #0f172a;
+      padding: 6px 10px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* Timeline / Work Experience */
+    .timeline-entry {
+      position: relative;
+      padding-left: 12px;
+      border-left: 1.5px solid #cbd5e1;
+      margin-top: 6px;
+    }
+
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -4.5px;
+      top: 3px;
+      width: 7.5px;
+      height: 7.5px;
+      border-radius: 50%;
+      background: #dc2626;
+      border: 1.5px solid #ffffff;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 8.7pt;
+      color: #0f172a;
+    }
+
+    .job-period {
+      font-size: 7.2pt;
+      font-weight: 600;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .job-company {
+      font-size: 7.8pt;
+      color: #dc2626;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .job-bullets {
+      list-style: none;
+      margin-top: 3px;
+    }
+
+    .job-bullets li {
+      font-size: 7.8pt;
+      color: #334155;
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 2px;
+      line-height: 1.34;
+    }
+
+    .job-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: #94a3b8;
+      font-size: 8pt;
+    }
+
+    /* Core Systems Section */
+    .systems-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 5px;
+    }
+
+    .system-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      padding: 6px 8px;
+      background: #f8fafc;
+      border-top: 2px solid #0f172a;
+    }
+
+    .system-card:nth-child(1) { border-top-color: #dc2626; }
+    .system-card:nth-child(2) { border-top-color: #2563eb; }
+    .system-card:nth-child(3) { border-top-color: #059669; }
+    .system-card:nth-child(4) { border-top-color: #7c3aed; }
+
+    .system-name {
+      font-weight: 700;
+      font-size: 8.1pt;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .system-tech {
+      font-size: 6.8pt;
+      font-weight: 600;
+      color: #64748b;
+      background: #ffffff;
+      padding: 1px 4px;
+      border-radius: 3px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .system-desc {
+      font-size: 7.2pt;
+      color: #475569;
+      line-height: 1.32;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-page">
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header">
+      <div class="header-avatar">
+        <img src="avatar.png" alt="Hoàng Đức Thiện">
+      </div>
+      <div class="header-info">
+        <div class="header-title-row">
+          <h1 class="header-name">HOÀNG ĐỨC THIỆN</h1>
+          <span class="header-badge">Kỹ sư Bách Khoa Bằng Giỏi</span>
+        </div>
+        <div class="header-role">Fullstack Software Engineer &bull; Reinsurance Systems &amp; Web/App</div>
+        <div class="header-contacts">
+          <div class="contact-pill">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <strong>0386 832 065</strong> (Zalo)
+          </div>
+          <div class="contact-pill">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Hà Nội (SN: 27/07/2001)</span>
+          </div>
+          <div class="contact-pill">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://quatbathien.github.io/WebCV_Pofolio/">quatbathien.github.io/WebCV_Pofolio</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= BODY ================= -->
+    <div class="cv-body">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- HỌC VẤN -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Học Vấn
+          </h2>
+          <div class="edu-item">
+            <div class="edu-degree">Kỹ Sư CNTT — Bằng Giỏi</div>
+            <div class="edu-school">ĐH Bách Khoa Hà Nội (HUST)</div>
+            <div class="edu-meta">Khoa CNTT Việt - Nhật (HEDSPI) &bull; 09/2024</div>
+            <p class="edu-desc">Đào tạo chuyên sâu về cấu trúc dữ liệu &amp; giải thuật, kiến trúc hệ thống máy tính, cơ sở dữ liệu lớn và quy trình phần mềm chuẩn Nhật Bản.</p>
+          </div>
+        </section>
+
+        <!-- KỸ NĂNG CÔNG NGHỆ -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            Công Nghệ Làm Chủ
+          </h2>
+
+          <div class="skill-group">
+            <div class="skill-cat">Backend &amp; Lập Trình</div>
+            <div class="skill-tags">
+              <span class="skill-tag highlight">.NET Core / .NET 10</span>
+              <span class="skill-tag highlight">C#</span>
+              <span class="skill-tag">VB.NET</span>
+              <span class="skill-tag">ASP.NET Web API / MVC</span>
+              <span class="skill-tag">RESTful API</span>
+              <span class="skill-tag">Clean Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Frontend &amp; Mobile</div>
+            <div class="skill-tags">
+              <span class="skill-tag highlight">React</span>
+              <span class="skill-tag highlight">TypeScript</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag highlight">React Native</span>
+              <span class="skill-tag">HTML5 / CSS3 / SCSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Cơ Sở Dữ Liệu</div>
+            <div class="skill-tags">
+              <span class="skill-tag highlight">Microsoft SQL Server</span>
+              <span class="skill-tag">Oracle Database</span>
+              <span class="skill-tag">Stored Procedures / Trigger</span>
+              <span class="skill-tag">Tối ưu Query &amp; Index</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Chất Lượng &amp; Công Cụ</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git / GitHub / GitLab</span>
+              <span class="skill-tag">Rà soát Git Diff</span>
+              <span class="skill-tag">UTF-8 BOM / CRLF Standards</span>
+              <span class="skill-tag">Kiểm thử hồi quy</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ỨNG DỤNG AI -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/></svg>
+            Ứng Dụng AI Thực Chiến
+          </h2>
+          <div class="ai-box">
+            <strong>Nguyên tắc: AI trợ lực có kiểm chứng</strong><br>
+            • Hỗ trợ quét nhanh kiến trúc &amp; logic mã nguồn kế thừa phức tạp.<br>
+            • Sinh boilerplate code &amp; gợi ý test cases biên.<br>
+            • Tự viết tool/script tự động hóa kiểm tra định dạng và git diff trước khi commit.
+          </div>
+        </section>
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT -->
+      <main class="content">
+        <!-- TỔNG QUAN NĂNG LỰC -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Tóm Tắt Năng Lực
+          </h2>
+          <p class="summary-text" style="margin-top: 5px;">
+            Kỹ sư CNTT Bằng Giỏi ĐH Bách Khoa Hà Nội với <strong>2 năm kinh nghiệm thực tế phát triển phần mềm trong ngành bảo hiểm &amp; tái bảo hiểm</strong> tại Trung tâm CNTT PVI. Nắm vững kỹ thuật lập trình Fullstack từ Mobile, Web Frontend đến Backend API và Cơ sở dữ liệu lõi; luôn đề cao tính chính xác, nhất quán và toàn vẹn của số liệu tài chính - kế toán.
+          </p>
+        </section>
+
+        <!-- KINH NGHIỆM LÀM VIỆC -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Kinh Nghiệm Làm Việc
+          </h2>
+
+          <div class="timeline-entry">
+            <div class="job-header">
+              <span class="job-title">Web/App Fullstack Developer</span>
+              <span class="job-period">08/2024 - Hiện tại</span>
+            </div>
+            <div class="job-company">Trung tâm Công nghệ Thông tin PVI (Chính thức từ 11/2024)</div>
+            <ul class="job-bullets">
+              <li>Trực tiếp tham gia phân tích, phát triển tính năng mới và bảo trì các hệ thống Web/App phục vụ lĩnh vực bảo hiểm &amp; tái bảo hiểm.</li>
+              <li>Lập trình Backend RESTful API (.NET), tối ưu hóa các Stored Procedures phức tạp trên SQL Server phục vụ đối soát và báo cáo tài chính.</li>
+              <li>Xây dựng và hoàn thiện giao diện người dùng (Web &amp; Mobile App), đảm bảo tính chính xác và trải nghiệm thao tác thuận tiện cho cán bộ nghiệp vụ.</li>
+              <li>Ứng dụng các công cụ AI và tự động hóa quy trình kiểm thử cục bộ, đảm bảo chuẩn hóa mã nguồn trước khi release.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="job-header">
+              <span class="job-title">Thực tập sinh Frontend Developer</span>
+              <span class="job-period">12/2022 - 05/2023</span>
+            </div>
+            <div class="job-company">Rikkeisoft &bull; Môi trường phát triển chuẩn Nhật Bản</div>
+            <ul class="job-bullets">
+              <li>Phát triển giao diện Web bằng React, TypeScript, tuân thủ nghiêm ngặt Coding Conventions và quy trình phối hợp Agile/Scrum.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="job-header">
+              <span class="job-title">Thực tập sinh Mobile Developer</span>
+              <span class="job-period">2022</span>
+            </div>
+            <div class="job-company">MK Technology &bull; Giải pháp thẻ thông minh &amp; bảo mật</div>
+            <ul class="job-bullets">
+              <li>Tìm hiểu và tham gia lập trình các chức năng ứng dụng di động kết nối REST API, xử lý bất đồng bộ và kiểm thử trên thiết bị thật.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- KINH NGHIỆM VỚI 4 HỆ THỐNG CỐT LÕI -->
+        <section>
+          <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Kinh Nghiệm Thực Chiến 4 Hệ Thống Cốt Lõi
+          </h2>
+
+          <div class="systems-grid">
+            <div class="system-card">
+              <div class="system-name">
+                <span>1. ReSmart</span>
+                <span class="system-tech">React Native &bull; REST API</span>
+              </div>
+              <p class="system-desc">
+                App di động điều hành số: Phê duyệt điện tử (Approve), ký số (e-Pen), tra cứu nghiệp vụ di động (e-SOA, e-Slip, e-Claim), báo cáo công nợ đối tác (Debt Report) và đơn tái tục.
+              </p>
+            </div>
+
+            <div class="system-card">
+              <div class="system-name">
+                <span>2. Web.SOA_DienTu</span>
+                <span class="system-tech">ASP.NET MVC &bull; C#</span>
+              </div>
+              <p class="system-desc">
+                Hệ thống quản lý Bảng kê tài khoản (SOA) 2 chiều: SOA OW (nhượng) &amp; SOA IW (nhận); import Excel hàng loạt hoặc nhập lẻ; đối soát Query, thanh toán Settlement và đóng gói hồ sơ.
+              </p>
+            </div>
+
+            <div class="system-card">
+              <div class="system-name">
+                <span>3. Web Contract Review</span>
+                <span class="system-tech">.NET 10 &bull; React 19</span>
+              </div>
+              <p class="system-desc">
+                Hiện đại hóa quản lý hợp đồng nhận tái (11 loại chứng từ FAC &amp; TTY), mô hình 5 bảng hạt nhân; tích hợp Interactive PDF &amp; AI Review (OCR trích xuất trường tự động), chạy song song WinForms.
+              </p>
+            </div>
+
+            <div class="system-card">
+              <div class="system-name">
+                <span>4. PVIRe2022</span>
+                <span class="system-tech">VB.NET &bull; SQL Server</span>
+              </div>
+              <p class="system-desc">
+                Hệ thống WinForms lõi quản trị dữ liệu lịch sử và logic nghiệp vụ tái bảo hiểm kế thừa nhiều năm (nhận/nhượng tái, bồi thường, kế toán); kết nối SOAP Services và CSDL SQL Server.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
