@@ -47,7 +47,7 @@ const chatResponses = {
     source: "Ứng Dụng AI"
   },
   "kinh nghiệm với các phần mềm hà nội re": {
-    answer: "Tại PVI, tôi trực tiếp tham gia phát triển, bảo trì và nắm chắc nghiệp vụ của 4 hệ thống phục vụ Hà Nội Re:\n\n1. ReSmart (React Native App & API): Ứng dụng điều hành di động, phê duyệt điện tử (Approve, e-Pen), tra cứu e-SOA, e-Slip, e-Claim, báo cáo công nợ (Debt Report).\n2. Web.SOA_DienTu (ASP.NET MVC & C#): Quản lý hồ sơ Bảng kê tài khoản 2 chiều SOA OW và SOA IW, import Excel / nhập lẻ, theo dõi Query, Settlement, đóng gói tải file hồ sơ.\n3. Web Contract Review (.NET 10 & React 19): Quản lý HĐ nhận tái (11 loại chứng từ FAC & TTY), mô hình 5 bảng hạt nhân, tích hợp Interactive PDF & AI Review ánh xạ trường dữ liệu, chạy song song WinForms trên CSDL PVR_2026.\n4. PVIRE2022 (VB.NET WinForms): Hệ thống lõi kế thừa nhiều năm, quản trị dữ liệu lịch sử và logic nghiệp vụ tái bảo hiểm cốt lõi.\n\nTôi sẵn sàng trao đổi chi tiết về kiến trúc kỹ thuật và nghiệp vụ thực tế của các hệ thống trên. Số điện thoại liên hệ: 0386 832 065.",
+    answer: "Tại PVI, tôi trực tiếp tham gia phát triển, bảo trì và nắm chắc nghiệp vụ của 4 hệ thống phục vụ Hà Nội Re:\n\n1. ReSmart (React Native App & API): Ứng dụng điều hành di động, phê duyệt điện tử (Approve, e-Pen), tra cứu e-SOA, e-Slip, e-Claim, báo cáo công nợ (Debt Report).\n2. Web.SOA_DienTu (ASP.NET MVC & C#): Quản lý hồ sơ Bảng kê tài khoản 2 chiều SOA OW và SOA IW, import Excel / nhập lẻ, theo dõi Query, Settlement, đóng gói tải file hồ sơ.\n3. Web Contract Review (.NET 10 & React 19): Quản lý HĐ nhận tái (11 loại chứng từ FAC & TTY), mô hình 5 bảng hạt nhân, tích hợp Interactive PDF & AI Review ánh xạ trường dữ liệu, chạy song song và đồng bộ dữ liệu với phần mềm WinForms.\n4. PVIRE2022 (VB.NET WinForms): Hệ thống lõi kế thừa nhiều năm, quản trị dữ liệu lịch sử và logic nghiệp vụ tái bảo hiểm cốt lõi.\n\nTôi sẵn sàng trao đổi chi tiết về kiến trúc kỹ thuật và nghiệp vụ thực tế của các hệ thống trên. Số điện thoại liên hệ: 0386 832 065.",
     source: "Dự Án Hà Nội Re"
   }
 };
@@ -63,7 +63,7 @@ const terminalResponses = {
   experience: "08/2024 - Nay: PVI (Trung tâm CNTT, Chính thức 11/2024) | 12/2022 - 05/2023: Rikkeisoft (FE Dev) | 2022: MK Tech (Mobile Dev).",
   skills: "Backend (.NET, C#, VB.NET, Web API), Frontend (JS, TS, React, HTML/CSS), CSDL (SQL Server, Oracle, Stored Procedures), Kiểm thử & Rà soát mã nguồn.",
   "ai-tools": "Tận dụng AI để tăng năng suất: Đọc hiểu code cũ, sinh boilerplate và tự viết tool/skill kiểm tra git diff, định dạng UTF-8 BOM/CRLF trước khi release.",
-  projects: "1. ReSmart (React Native App điều hành, phê duyệt, e-SOA/e-Slip/e-Claim) | 2. Web.SOA_DienTu (ASP.NET MVC quản lý SOA OW/IW, import Excel, đối soát) | 3. Web Contract Review (.NET 10 + React 19, 11 loại ctu FAC/TTY, AI Review PDF, side-by-side WinForms) | 4. PVIRE2022 (Core WinForms VB.NET CSDL PVR_2026).",
+  projects: "1. ReSmart (React Native App điều hành, phê duyệt, e-SOA/e-Slip/e-Claim) | 2. Web.SOA_DienTu (ASP.NET MVC quản lý SOA OW/IW, import Excel, đối soát) | 3. Web Contract Review (.NET 10 + React 19, 11 loại ctu FAC/TTY, AI Review PDF, side-by-side WinForms) | 4. PVIRE2022 (Core WinForms VB.NET & SQL Server).",
   hanoire: "Kinh nghiệm thực tế phát triển & vận hành 4 hệ thống: ReSmart, Web.SOA_DienTu, Web Contract Review, PVIRE2022. Liên hệ: 0386 832 065.",
   contact: "Hoàng Đức Thiện | SĐT & Zalo: 0386 832 065 | Địa chỉ: Hà Nội.",
   help: "Danh sách lệnh: whoami, education, experience, skills, ai-tools, projects, hanoire, contact, clear, exit"

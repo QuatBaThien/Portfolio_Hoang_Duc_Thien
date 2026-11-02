@@ -22,8 +22,8 @@ Website Portfolio & Hồ sơ năng lực cá nhân của **Kỹ sư Hoàng Đứ
    - **Kinh nghiệm thực chiến 4 hệ thống cốt lõi của Hà Nội Re:**
      - *ReSmart:* Mobile App (React Native) & Backend REST API điều hành, phê duyệt điện tử (`approve`, `epen`), tra cứu e-SOA, e-Slip, e-Claim và báo cáo công nợ.
      - *Web.SOA_DienTu:* Web ASP.NET MVC (.NET Framework) quản lý hồ sơ Bảng kê tài khoản 2 chiều SOA OW và SOA IW, import Excel/nhập lẻ, Query & Settlement.
-     - *Web Contract Review:* Hệ thống hiện đại hóa (.NET 10 Clean Architecture + React 19/TS) quản lý 11 loại chứng từ nhận tái FAC & TTY trên CSDL PVR_2026, tích hợp AI Review PDF & OCR.
-     - *PVIRe2022:* Hệ thống WinForms VB.NET cốt lõi kết nối SOAP service và CSDL `PVR_2026`.
+     - *Web Contract Review:* Hệ thống hiện đại hóa (.NET 10 Clean Architecture + React 19/TS) quản lý 11 loại chứng từ nhận tái FAC & TTY, tích hợp AI Review PDF & OCR.
+     - *PVIRe2022:* Hệ thống WinForms VB.NET cốt lõi kết nối SOAP service và CSDL SQL Server.
    - **Thông tin liên hệ trực tiếp:** Số điện thoại & Zalo: **0386 832 065**.
 
 3. **Tính năng Tương tác:**
