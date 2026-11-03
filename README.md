@@ -14,7 +14,7 @@ Website Portfolio & CV của **Hoàng Đức Thiện** — Kỹ sư CNTT, ĐH B�
    - Thiết kế chuẩn Responsive tối ưu trên Desktop, Tablet và Mobile.
 
 2. **Nội dung hồ sơ:**
-   - Hơn 2 năm kinh nghiệm phát triển phần mềm, trực tiếp phát triển & vận hành hệ thống nghiệp vụ tái bảo hiểm tại Trung tâm CNTT PVI từ 08/2024 (.NET, React / React Native, SQL Server).
+   - Hơn 2 năm xây dựng & vận hành hệ thống nghiệp vụ tái bảo hiểm tại Trung tâm CNTT PVI từ 08/2024 (.NET, React / React Native, SQL Server).
    - Học vấn: Kỹ sư CNTT, ĐH Bách Khoa Hà Nội (HEDSPI), GPA 3.2/4 — Xếp loại Giỏi. Tiếng Nhật JLPT N3.
    - Bản CV public (`cv.html`, `CV_HoangDucThien.pdf`) đã lược tên hệ thống nội bộ.
 

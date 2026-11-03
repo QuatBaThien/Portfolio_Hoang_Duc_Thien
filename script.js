@@ -43,11 +43,11 @@ const chatResponses = {
     source: "Kinh nghiệm"
   },
   "cách tiếp cận & ứng dụng ai": {
-    answer: "Tôi dùng AI coding assistant để đọc nhanh mã nguồn cũ. Tôi cũng tự xây dựng công cụ pre-push-tester để kiểm tra code trước khi đưa lên hệ thống chung: thay đổi đã đúng yêu cầu ban đầu chưa, có ảnh hưởng đến chức năng khác không, có lỗi ngầm hay lỗi định dạng file không. Kết quả báo theo 3 mức: Đạt / Cần lưu ý / Lỗi. Kết quả AI đưa ra tôi đều tự đọc lại và kiểm chứng trước khi đưa lên Production.\n\nNgoài ra tôi phụ trách phần trích xuất hợp đồng tái bảo hiểm PDF (Treaty/Facultative) bằng AI/OCR trong dự án web rà soát hợp đồng (đang kiểm thử).",
+    answer: "Tôi dùng AI coding assistant để đọc nhanh mã nguồn cũ. Tôi cũng tự xây dựng công cụ pre-push-tester để kiểm tra code trước khi đưa lên hệ thống chung: thay đổi đã đúng yêu cầu ban đầu chưa, có ảnh hưởng đến chức năng khác không, có lỗi ngầm hay lỗi định dạng file không. Kết quả báo theo 3 mức: Đạt / Cần lưu ý / Lỗi. Kết quả AI đưa ra tôi đều tự đọc lại và kiểm chứng trước khi đưa lên Production.\n\nNgoài ra tôi phụ trách phần trích xuất hợp đồng tái bảo hiểm PDF bằng AI/OCR trong dự án web rà soát hợp đồng (đang kiểm thử).",
     source: "Ứng dụng AI"
   },
   "các dự án đã làm": {
-    answer: "4 hệ thống nghiệp vụ tái bảo hiểm tôi làm tại Trung tâm CNTT PVI:\n\n1. App điều hành di động: đưa tính toán báo cáo về Backend + cache, thời gian tải từ hơn 1 phút xuống 1–2 giây; làm thêm web quản trị import lịch họp, xem khảo sát.\n2. Hệ thống bảng kê SOA (Inward/Outward): vận hành, hỗ trợ đối soát số liệu phí, hoa hồng, bồi thường (Claim); làm thêm chức năng nhập chứng từ đơn lẻ.\n3. Web rà soát hợp đồng (Treaty/Facultative): phụ trách trích xuất hợp đồng PDF bằng AI/OCR (đang kiểm thử).\n4. Hệ thống nghiệp vụ lõi (VB.NET): hỗ trợ vận hành, sửa lỗi, nâng cấp nhỏ.\n\nChi tiết tôi xin trao đổi trực tiếp khi phỏng vấn. Liên hệ: 0386 832 065 / Thienhd4.hmc@gmail.com.",
+    answer: "4 hệ thống nghiệp vụ tái bảo hiểm tôi làm tại Trung tâm CNTT PVI:\n\n1. App điều hành di động: đưa tính toán báo cáo về Backend + cache, thời gian tải từ hơn 1 phút xuống 1–2 giây; làm thêm web quản trị import lịch họp, xem khảo sát.\n2. Hệ thống bảng kê SOA: vận hành, hỗ trợ người dùng, xử lý lỗi; làm thêm chức năng nhập chứng từ đơn lẻ.\n3. Web rà soát hợp đồng: phụ trách trích xuất hợp đồng PDF bằng AI/OCR (đang kiểm thử).\n4. Hệ thống nghiệp vụ lõi (VB.NET): hỗ trợ vận hành, sửa lỗi, nâng cấp nhỏ.\n\nChi tiết tôi xin trao đổi trực tiếp khi phỏng vấn. Liên hệ: 0386 832 065 / Thienhd4.hmc@gmail.com.",
     source: "Dự án"
   }
 };
