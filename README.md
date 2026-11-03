@@ -2,8 +2,8 @@
 
 Website Portfolio & CV của **Hoàng Đức Thiện** — Kỹ sư CNTT, ĐH Bách Khoa Hà Nội; phát triển & vận hành hệ thống nghiệp vụ tái bảo hiểm.
 
-* **Live Demo:** [https://quatbathien.github.io/WebCV_Pofolio/](https://quatbathien.github.io/WebCV_Pofolio/)
-* **Repository:** [https://github.com/QuatBaThien/WebCV_Pofolio](https://github.com/QuatBaThien/WebCV_Pofolio)
+* **Live Demo:** [https://quatbathien.github.io/Portfolio_Hoang_Duc_Thien/](https://quatbathien.github.io/Portfolio_Hoang_Duc_Thien/)
+* **Repository:** [https://github.com/QuatBaThien/Portfolio_Hoang_Duc_Thien](https://github.com/QuatBaThien/Portfolio_Hoang_Duc_Thien)
 
 ---
 
