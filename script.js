@@ -29,44 +29,43 @@ const chatTooltip = document.getElementById("chatTooltip");
 const closeTooltipBtn = document.getElementById("closeTooltipBtn");
 
 const typingPhrases = [
-  "Reinsurance Systems",
-  "AI-Assisted Workflows"
+  "Tái bảo hiểm",
+  ".NET · React Native · SQL Server"
 ];
 
 const chatResponses = {
   "bằng cấp & học vấn bách khoa": {
-    answer: "Tôi tốt nghiệp chương trình Kỹ sư Công nghệ thông tin, xếp loại Giỏi (tháng 09/2024) tại Khoa Công nghệ thông tin Việt - Nhật (HEDSPI), Trường CNTT & Truyền thông (SoICT), Đại học Bách Khoa Hà Nội.\n\nChương trình học rèn luyện nền tảng toán giải thuật vững chắc, tư duy thiết kế phần mềm bài bản và tác phong làm việc chuẩn mực, cẩn thận của kỹ sư theo định hướng Nhật Bản.",
+    answer: "Tôi tốt nghiệp Kỹ sư Công nghệ thông tin tháng 09/2024, chương trình Việt - Nhật (HEDSPI), Trường CNTT & Truyền thông, Đại học Bách Khoa Hà Nội. GPA 3.2/4, xếp loại Giỏi.\n\nNgoại ngữ: tiếng Anh giao tiếp, đọc hiểu tài liệu kỹ thuật; tiếng Nhật JLPT N3 (2022).",
     source: "Học vấn"
   },
   "kinh nghiệm làm việc thực tế": {
-    answer: "Quá trình làm việc thực tế của tôi:\n\n• 08/2024 - Hiện tại: PVI (Trung tâm CNTT) - Vị trí Web/App Fullstack Developer (nhân viên chính thức từ 11/2024). Tham gia phát triển, nâng cấp và bảo trì 4 hệ thống nghiệp vụ thực tế, hoàn thành hơn 20 chức năng/màn hình và API.\n• 12/2022 - 05/2023: Rikkeisoft - Thực tập sinh Frontend Dev (môi trường quy chuẩn Nhật Bản).\n• Năm 2022: MK Technology - Thực tập sinh Mobile Dev (công nghệ thẻ & bảo mật).",
+    answer: "• 08/2024 - nay: Trung tâm CNTT PVI - Lập trình viên Web/App Fullstack (chính thức từ 11/2024). Phát triển và vận hành 4 hệ thống nghiệp vụ tái bảo hiểm; tự deploy production và phát hành app lên App Store / Google Play.\n• 12/2022 - 05/2023: Rikkeisoft - Thực tập sinh Frontend (React, TypeScript).\n• 04/2022 - 01/2023: MK Technology - Thực tập sinh Mobile.",
     source: "Kinh nghiệm"
   },
   "cách tiếp cận & ứng dụng ai": {
-    answer: "Quan điểm của tôi về AI là 'Công cụ trợ lực có kiểm chứng':\n\n• Tôi sử dụng AI để hỗ trợ đọc hiểu nhanh các luồng mã nguồn kế thừa và tóm tắt cấu trúc phụ thuộc.\n• Tôi tự xây dựng kịch bản kiểm thử (Custom Skill 'pre-push-tester') để tự động hóa khâu kiểm tra định dạng mã nguồn (UTF-8 BOM, CRLF) và rà soát git diff trước khi đẩy code lên kho lưu trữ chung (pre-push).\n• Dùng AI tạo các đoạn mã khung (boilerplate) để tiết kiệm thời gian, tập trung trí lực vào xử lý nghiệp vụ và kiểm chứng tính toàn vẹn của dữ liệu.",
+    answer: "Tôi dùng AI coding assistant để đọc nhanh mã nguồn cũ. Tôi cũng tự xây dựng công cụ pre-push-tester để kiểm tra code trước khi đưa lên hệ thống chung: thay đổi đã đúng yêu cầu ban đầu chưa, có ảnh hưởng đến chức năng khác không, có lỗi ngầm hay lỗi định dạng file không. Kết quả báo theo 3 mức: Đạt / Cần lưu ý / Lỗi. Kết quả AI đưa ra tôi đều tự đọc lại và kiểm chứng trước khi đưa lên Production.\n\nNgoài ra tôi phụ trách phần trích xuất hợp đồng tái bảo hiểm PDF (Treaty/Facultative) bằng AI/OCR trong dự án web rà soát hợp đồng (đang kiểm thử).",
     source: "Ứng dụng AI"
   },
-  "kinh nghiệm với các phần mềm hà nội re": {
-    answer: "Tại PVI, tôi tham gia phát triển, nâng cấp và bảo trì 4 hệ thống nghiệp vụ quan trọng phục vụ Hà Nội Re:\n\n1. Ứng dụng di động ReSmart (Phát triển tính năng & nâng cấp): Phục vụ điều hành, phê duyệt điện tử, tra cứu thông tin nghiệp vụ và xem báo cáo trên thiết bị di động.\n2. Hệ thống SOA điện tử - e-SOA (Nâng cấp & bảo trì Production): Quản lý, đối chiếu bảng kê tài khoản, tối ưu hóa truy vấn đối soát và hỗ trợ xử lý dữ liệu vận hành.\n3. Hệ thống Quản lý & Rà soát hợp đồng - Web Contract Review (Phát triển mới / Hiện đại hóa): Xây dựng giao diện Web, API nghiệp vụ và thử nghiệm tích hợp AI/OCR hỗ trợ bóc tách thông tin từ tài liệu PDF.\n4. Hệ thống Quản trị nghiệp vụ lõi - PVIRe2022 (Bảo trì & hỗ trợ vận hành): Bảo trì mã nguồn, xử lý yêu cầu kỹ thuật phát sinh và đảm bảo đồng bộ dữ liệu.\n\nTôi sẵn sàng trao đổi chi tiết trực tiếp trong phỏng vấn chuyên môn. Số điện thoại liên hệ: 0386 832 065.",
-    source: "Dự án Hà Nội Re"
+  "các dự án đã làm": {
+    answer: "4 hệ thống nghiệp vụ tái bảo hiểm tôi làm tại Trung tâm CNTT PVI:\n\n1. App điều hành di động: đưa tính toán báo cáo về Backend + cache, thời gian tải từ hơn 1 phút xuống 1–2 giây; làm thêm web quản trị import lịch họp, xem khảo sát.\n2. Hệ thống bảng kê SOA (Inward/Outward): vận hành, hỗ trợ đối soát số liệu phí, hoa hồng, bồi thường (Claim); làm thêm chức năng nhập chứng từ đơn lẻ.\n3. Web rà soát hợp đồng (Treaty/Facultative): phụ trách trích xuất hợp đồng PDF bằng AI/OCR (đang kiểm thử).\n4. Hệ thống nghiệp vụ lõi (VB.NET): hỗ trợ vận hành, sửa lỗi, nâng cấp nhỏ.\n\nChi tiết tôi xin trao đổi trực tiếp khi phỏng vấn. Liên hệ: 0386 832 065 / Thienhd4.hmc@gmail.com.",
+    source: "Dự án"
   }
 };
 
 const defaultChatReply = {
-  answer: "Bạn có thể hỏi tôi về: Bằng cấp Bách Khoa, Kinh nghiệm làm việc, Công nghệ sử dụng, Cách tôi ứng dụng AI vào công việc, hoặc Kinh nghiệm tham gia các phần mềm nghiệp vụ của Hà Nội Re.",
-  source: "Trợ lý hồ sơ"
+  answer: "Bạn có thể hỏi về: học vấn, kinh nghiệm làm việc, công nghệ sử dụng, cách tôi dùng AI, hoặc các dự án đã làm.",
+  source: "Trợ lý hồ sơ (trả lời tự động)"
 };
 
 const terminalResponses = {
-  whoami: "Hoàng Đức Thiện (SN 27/07/2001, Hà Nội). Kỹ sư CNTT xếp loại Giỏi - ĐH Bách Khoa Hà Nội. Vị trí: Web/App Fullstack Developer.",
-  education: "Tốt nghiệp chương trình Kỹ sư CNTT, xếp loại Giỏi (09/2024) - Khoa CNTT Việt - Nhật (HEDSPI), Trường CNTT & TT, ĐH Bách Khoa Hà Nội.",
-  experience: "08/2024 - Nay: PVI (Trung tâm CNTT, chính thức 11/2024) | 12/2022 - 05/2023: Rikkeisoft (FE Dev) | 2022: MK Tech (Mobile Dev).",
-  skills: "Backend (.NET, C#, VB.NET, Web API), Frontend (JS, TS, React, HTML/CSS, React Native), CSDL (SQL Server, Oracle, Stored Procedures), Kiểm thử & rà soát mã nguồn.",
-  "ai-tools": "Tận dụng AI có kiểm chứng: Hỗ trợ đọc hiểu code cũ, tạo boilerplate và xây dựng kịch bản kiểm tra git diff, định dạng UTF-8 BOM/CRLF trước khi đẩy code (pre-push).",
-  projects: "Tham gia phát triển & bảo trì 4 hệ thống nghiệp vụ: 1. Ứng dụng di động ReSmart | 2. Hệ thống SOA điện tử (e-SOA) | 3. Web Contract Review (Quản lý HĐ & thử nghiệm AI/OCR) | 4. Hệ thống nghiệp vụ lõi PVIRe2022.",
-  hanoire: "Tham gia phát triển, nâng cấp và bảo trì vận hành 4 hệ thống: ReSmart, e-SOA, Web Contract Review, PVIRe2022. Liên hệ: 0386 832 065.",
-  contact: "Hoàng Đức Thiện | SĐT & Zalo: 0386 832 065 | Địa chỉ: Hà Nội.",
-  help: "Danh sách lệnh: whoami, education, experience, skills, ai-tools, projects, hanoire, contact, clear, exit"
+  whoami: "Hoàng Đức Thiện (Hà Nội). Kỹ sư CNTT - ĐH Bách Khoa Hà Nội. Phát triển & vận hành hệ thống nghiệp vụ tái bảo hiểm.",
+  education: "Kỹ sư CNTT (09/2024) - HEDSPI, ĐH Bách Khoa Hà Nội. GPA 3.2/4, loại Giỏi. JLPT N3.",
+  experience: "08/2024 - nay: Trung tâm CNTT PVI (chính thức 11/2024) | 12/2022 - 05/2023: Rikkeisoft (FE intern) | 04/2022 - 01/2023: MK Technology (Mobile intern).",
+  skills: "Backend (C#, ASP.NET Web API, VB.NET) | Mobile & Web (React Native, React, TypeScript) | CSDL (SQL Server, Stored Procedures) | Deploy Production, App Store / Google Play.",
+  "ai-tools": "Dùng AI để đọc nhanh code cũ; skill pre-push-tester tự xây dựng: kiểm tra trước khi push xem thay đổi đúng yêu cầu chưa, có ảnh hưởng phần khác không, có lỗi ngầm không; phụ trách trích xuất hợp đồng PDF bằng AI/OCR (đang kiểm thử).",
+  projects: "1. App điều hành di động (báo cáo từ >1 phút xuống 1–2s) | 2. Hệ thống bảng kê SOA | 3. Web rà soát hợp đồng (AI/OCR) | 4. Hệ thống nghiệp vụ lõi (VB.NET).",
+  contact: "Hoàng Đức Thiện | SĐT & Zalo: 0386 832 065 | Email: Thienhd4.hmc@gmail.com | Hà Nội.",
+  help: "Danh sách lệnh: whoami, education, experience, skills, ai-tools, projects, contact, clear, exit"
 };
 
 function toggleScrolledState() {
@@ -204,17 +203,18 @@ function appendMessage(text, type, source = "") {
 
 function getChatReply(message) {
   const normalized = message.trim().toLowerCase();
-  if (normalized.includes("học vấn") || normalized.includes("bách khoa") || normalized.includes("bằng") || normalized.includes("hust")) {
+  if (chatResponses[normalized]) return chatResponses[normalized];
+  if (normalized.includes("dự án") || normalized.includes("hệ thống") || normalized.includes("soa") || normalized.includes("hợp đồng") || normalized.includes("tái bảo hiểm") || normalized.includes("app")) {
+    return chatResponses["các dự án đã làm"];
+  }
+  if (normalized.includes("học vấn") || normalized.includes("bách khoa") || normalized.includes("bằng") || normalized.includes("hust") || normalized.includes("gpa") || normalized.includes("ngoại ngữ")) {
     return chatResponses["bằng cấp & học vấn bách khoa"];
   }
   if (normalized.includes("kinh nghiệm") || normalized.includes("làm việc") || normalized.includes("công tác") || normalized.includes("pvi") || normalized.includes("rikkei") || normalized.includes("mk")) {
     return chatResponses["kinh nghiệm làm việc thực tế"];
   }
-  if (normalized.includes("ai") || normalized.includes("agent") || normalized.includes("công cụ") || normalized.includes("tool") || normalized.includes("kiểm thử")) {
+  if (/\bai\b/.test(normalized) || normalized.includes("agent") || normalized.includes("ocr") || normalized.includes("công cụ") || normalized.includes("tool")) {
     return chatResponses["cách tiếp cận & ứng dụng ai"];
-  }
-  if (normalized.includes("resmart") || normalized.includes("soa") || normalized.includes("contract") || normalized.includes("pvire") || normalized.includes("hà nội re") || normalized.includes("hanoi re") || normalized.includes("tái bảo hiểm") || normalized.includes("dự án")) {
-    return chatResponses["kinh nghiệm với các phần mềm hà nội re"];
   }
   return defaultChatReply;
 }
@@ -264,7 +264,7 @@ function openChatSidebar() {
     welcomeMessageTyped = true;
     chatWindow.innerHTML = "";
     window.setTimeout(() => {
-      appendMessage("Xin chào! Bạn có thể chọn câu hỏi bên dưới hoặc nhập câu hỏi về học vấn Bách Khoa, kinh nghiệm làm việc, cách tôi ứng dụng AI, hoặc các phần mềm ReSmart, SOA phục vụ Hà Nội Re.", "bot");
+      appendMessage("Xin chào! Bạn có thể chọn câu hỏi bên dưới hoặc nhập câu hỏi về học vấn, kinh nghiệm làm việc, cách tôi dùng AI, hoặc các dự án đã làm.", "bot");
     }, 350);
   }
 }
@@ -301,7 +301,7 @@ function runTerminalCommand(command) {
     return;
   }
   appendTerminalLine(`<span class="prompt">visitor@thien:~$</span> ${normalized}`);
-  appendTerminalLine(terminalResponses[normalized] || "Lệnh không xác định. Thử: whoami, education, experience, skills, ai-tools, projects, hanoire, clear, exit.");
+  appendTerminalLine(terminalResponses[normalized] || "Lệnh không xác định. Thử: whoami, education, experience, skills, ai-tools, projects, contact, clear, exit.");
 }
 
 function initMagneticButtons() {

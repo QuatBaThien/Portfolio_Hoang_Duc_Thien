@@ -812,12 +812,12 @@ button {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
 }
 
 .ai-tools-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .skill-card,
@@ -888,17 +888,21 @@ button {
   flex-direction: column;
   gap: 0.7rem;
   flex: 1;
-  padding: 0.95rem 0.95rem 1.25rem 0.95rem;
+  padding: 1.35rem 1.45rem 1.45rem;
 }
 
 .project-content p {
   margin: 0;
-  line-height: 1.72;
-  min-height: 5.2rem;
+  line-height: 1.68;
+}
+
+.project-content .badge-row {
+  margin-top: auto;
+  padding-top: 0.45rem;
 }
 
 .projects-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
 }
 
@@ -1820,15 +1824,12 @@ body.chat-sidebar-open .chat-badge-container {
 
   .about-grid,
   .skills-grid,
+  .ai-tools-grid,
   .projects-grid,
   .blog-grid,
   .contact-grid,
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .projects-grid .project-card:nth-child(3) {
-    grid-column: span 2;
   }
 
   .section-heading h2 {

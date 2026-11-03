@@ -1,649 +1,85 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Hoàng Đức Thiện | Fullstack Software Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    @page {
-      size: A4 portrait;
-      margin: 0;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      width: 210mm;
-      height: 297mm;
-      max-height: 297mm;
-      overflow: hidden;
-      background: #ffffff;
-      color: #1e293b;
-      font-size: 8.8pt;
-      line-height: 1.38;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    /* Outer Container */
-    .cv-page {
-      width: 210mm;
-      height: 297mm;
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-    }
-
-    /* ================= HEADER ================= */
-    .cv-header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #31101e 100%);
-      color: #ffffff;
-      padding: 18px 24px 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 3px solid #dc2626;
-    }
-
-    .header-avatar {
-      width: 78px;
-      height: 78px;
-      min-width: 78px;
-      border-radius: 50%;
-      border: 2.5px solid #ffffff;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-      background: linear-gradient(145deg, #1e293b, #0f172a);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .header-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 15%;
-    }
-
-    .header-info {
-      flex: 1;
-    }
-
-    .header-title-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .header-name {
-      font-size: 19pt;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      line-height: 1.1;
-    }
-
-    .header-badge {
-      background: rgba(220, 38, 38, 0.25);
-      border: 1px solid rgba(248, 113, 113, 0.45);
-      color: #fecaca;
-      font-size: 7.2pt;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .header-role {
-      font-size: 9.8pt;
-      font-weight: 600;
-      color: #f87171;
-      margin-top: 3px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .header-contacts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 16px;
-      margin-top: 8px;
-      font-size: 7.8pt;
-      color: #cbd5e1;
-    }
-
-    .contact-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .contact-pill svg {
-      width: 11px;
-      height: 11px;
-      stroke: #f87171;
-      stroke-width: 2.2;
-      fill: none;
-    }
-
-    .contact-pill a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ================= MAIN CONTENT 2 COLUMNS ================= */
-    .cv-body {
-      display: flex;
-      flex: 1;
-      height: calc(297mm - 120px);
-    }
-
-    /* LEFT SIDEBAR (~33%) */
-    .sidebar {
-      width: 68mm;
-      min-width: 68mm;
-      background: #f8fafc;
-      border-right: 1px solid #e2e8f0;
-      padding: 15px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 13px;
-    }
-
-    /* RIGHT COLUMN (~67%) */
-    .content {
-      flex: 1;
-      padding: 15px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      background: #ffffff;
-    }
-
-    /* Section Headings */
-    .section-title {
-      font-size: 8.8pt;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding-bottom: 4px;
-      border-bottom: 1.5px solid #e2e8f0;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1.5px;
-      width: 24px;
-      height: 1.5px;
-      background: #dc2626;
-    }
-
-    .section-title svg {
-      width: 12px;
-      height: 12px;
-      stroke: #dc2626;
-      stroke-width: 2.2;
-      fill: none;
-    }
-
-    /* Education Block */
-    .edu-item {
-      margin-top: 5px;
-    }
-
-    .edu-degree {
-      font-weight: 700;
-      font-size: 8.6pt;
-      color: #0f172a;
-    }
-
-    .edu-school {
-      font-size: 7.9pt;
-      color: #dc2626;
-      font-weight: 600;
-      margin-top: 1px;
-    }
-
-    .edu-meta {
-      font-size: 7.4pt;
-      color: #64748b;
-      margin-top: 2px;
-    }
-
-    .edu-desc {
-      font-size: 7.4pt;
-      color: #475569;
-      margin-top: 4px;
-      line-height: 1.35;
-    }
-
-    /* Skills Groups */
-    .skill-group {
-      margin-top: 5px;
-    }
-
-    .skill-cat {
-      font-weight: 700;
-      font-size: 7.8pt;
-      color: #1e293b;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 3px;
-    }
-
-    .skill-cat::before {
-      content: "";
-      width: 4px;
-      height: 4px;
-      background: #dc2626;
-      border-radius: 50%;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3.5px;
-    }
-
-    .skill-tag {
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      padding: 1.5px 6px;
-      border-radius: 4px;
-      font-size: 7.1pt;
-      color: #334155;
-      font-weight: 500;
-    }
-
-    .skill-tag.highlight {
-      background: #fef2f2;
-      border-color: #fecaca;
-      color: #b91c1c;
-      font-weight: 600;
-    }
-
-    /* AI Tools Callout */
-    .ai-box {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-left: 2.5px solid #dc2626;
-      border-radius: 4px;
-      padding: 6px 8px;
-      margin-top: 4px;
-      font-size: 7.3pt;
-      color: #334155;
-      line-height: 1.34;
-    }
-
-    /* Summary Box */
-    .summary-text {
-      font-size: 8.2pt;
-      color: #334155;
-      line-height: 1.42;
-      background: #f8fafc;
-      border-left: 3px solid #0f172a;
-      padding: 6px 10px;
-      border-radius: 0 4px 4px 0;
-    }
-
-    /* Timeline / Work Experience */
-    .timeline-entry {
-      position: relative;
-      padding-left: 12px;
-      border-left: 1.5px solid #cbd5e1;
-      margin-top: 6px;
-    }
-
-    .timeline-entry::before {
-      content: "";
-      position: absolute;
-      left: -4.5px;
-      top: 3px;
-      width: 7.5px;
-      height: 7.5px;
-      border-radius: 50%;
-      background: #dc2626;
-      border: 1.5px solid #ffffff;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .job-title {
-      font-weight: 700;
-      font-size: 8.7pt;
-      color: #0f172a;
-    }
-
-    .job-period {
-      font-size: 7.2pt;
-      font-weight: 600;
-      color: #64748b;
-      background: #f1f5f9;
-      padding: 1px 6px;
-      border-radius: 3px;
-    }
-
-    .job-company {
-      font-size: 7.8pt;
-      color: #dc2626;
-      font-weight: 600;
-      margin-top: 1px;
-    }
-
-    .job-bullets {
-      list-style: none;
-      margin-top: 3px;
-    }
-
-    .job-bullets li {
-      font-size: 7.8pt;
-      color: #334155;
-      position: relative;
-      padding-left: 10px;
-      margin-bottom: 2px;
-      line-height: 1.34;
-    }
-
-    .job-bullets li::before {
-      content: "▪";
-      position: absolute;
-      left: 0;
-      color: #94a3b8;
-      font-size: 8pt;
-    }
-
-    /* Core Systems Section */
-    .systems-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7px;
-      margin-top: 5px;
-    }
-
-    .system-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 5px;
-      padding: 6px 8px;
-      background: #f8fafc;
-      border-top: 2px solid #0f172a;
-    }
-
-    .system-card:nth-child(1) { border-top-color: #dc2626; }
-    .system-card:nth-child(2) { border-top-color: #2563eb; }
-    .system-card:nth-child(3) { border-top-color: #059669; }
-    .system-card:nth-child(4) { border-top-color: #7c3aed; }
-
-    .system-name {
-      font-weight: 700;
-      font-size: 8.1pt;
-      color: #0f172a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2px;
-    }
-
-    .system-tech {
-      font-size: 6.8pt;
-      font-weight: 600;
-      color: #64748b;
-      background: #ffffff;
-      padding: 1px 4px;
-      border-radius: 3px;
-      border: 1px solid #e2e8f0;
-    }
-
-    .system-desc {
-      font-size: 7.2pt;
-      color: #475569;
-      line-height: 1.32;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV - Hoàng Đức Thiện</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #fff; }
+  body {
+    font-family: 'Times New Roman', 'Liberation Serif', Times, serif;
+    color: #000; font-size: 11pt; line-height: 1.32;
+    width: 210mm; margin: 0 auto;
+    padding: 15mm 18mm 13mm;
+  }
+  h1 { text-align: center; font-size: 20pt; letter-spacing: 1px; font-weight: bold; }
+  .contact { text-align: center; font-size: 10.5pt; margin-top: 3px; }
+  .contact a { color: #000; text-decoration: none; }
+  h2 {
+    font-size: 11.5pt; font-weight: bold; text-transform: uppercase; letter-spacing: .5px;
+    border-bottom: 1px solid #000; margin: 13px 0 6px; padding-bottom: 1px;
+  }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .org { font-weight: bold; }
+  .role { font-style: italic; }
+  .entry { margin-top: 8px; }
+  .entry:first-of-type { margin-top: 0; }
+  ul { margin: 2px 0 0 18px; }
+  li { margin-top: 2px; }
+  p.summary { }
+  .skills p { margin-top: 2px; }
+  @media screen { body { box-shadow: 0 0 8px rgba(0,0,0,.15); margin: 16px auto; } }
+  @media print { body { box-shadow: none; margin: 0; } }
+</style>
 </head>
 <body>
-  <div class="cv-page">
-    <!-- ================= HEADER ================= -->
-    <header class="cv-header">
-      <div class="header-avatar">
-        <img src="avatar.png" alt="Hoàng Đức Thiện">
-      </div>
-      <div class="header-info">
-        <div class="header-title-row">
-          <h1 class="header-name">HOÀNG ĐỨC THIỆN</h1>
-          <span class="header-badge">Kỹ sư CNTT — Xếp loại Giỏi</span>
-        </div>
-        <div class="header-role">Fullstack Software Engineer &bull; Reinsurance Systems &amp; Web/App</div>
-        <div class="header-contacts">
-          <div class="contact-pill">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <strong>0386 832 065</strong> (Zalo)
-          </div>
-          <div class="contact-pill">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Hà Nội (SN: 27/07/2001)</span>
-          </div>
-          <div class="contact-pill">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <a href="https://quatbathien.github.io/WebCV_Pofolio/">quatbathien.github.io/WebCV_Pofolio</a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <h1>HOÀNG ĐỨC THIỆN</h1>
+  <div class="contact">Hà Nội &bull; 0386 832 065 (Zalo) &bull; <a href="mailto:Thienhd4.hmc@gmail.com">Thienhd4.hmc@gmail.com</a></div>
+  <div class="contact"><a href="https://quatbathien.github.io/WebCV_Pofolio/">quatbathien.github.io/WebCV_Pofolio</a></div>
 
-    <!-- ================= BODY ================= -->
-    <div class="cv-body">
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <!-- HỌC VẤN -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Học vấn
-          </h2>
-          <div class="edu-item">
-            <div class="edu-degree">Kỹ sư CNTT — Xếp loại Giỏi</div>
-            <div class="edu-school">ĐH Bách Khoa Hà Nội (HUST)</div>
-            <div class="edu-meta">Khoa CNTT Việt - Nhật (HEDSPI) &bull; 09/2024</div>
-            <p class="edu-desc">Tốt nghiệp chương trình Kỹ sư Công nghệ thông tin, xếp loại Giỏi. Đào tạo bài bản về cấu trúc dữ liệu &amp; giải thuật, kiến trúc hệ thống, cơ sở dữ liệu và quy trình kỹ nghệ phần mềm chuẩn Nhật Bản.</p>
-          </div>
-        </section>
+  <h2>Mục tiêu nghề nghiệp</h2>
+  <p class="summary">Chuyên viên phát triển &amp; vận hành hệ thống. Hơn 2 năm kinh nghiệm phát triển phần mềm, trực tiếp phát triển và vận hành các hệ thống nghiệp vụ tái bảo hiểm tại Trung tâm CNTT PVI (từ 08/2024) trên .NET, React Native và SQL Server — từ tối ưu hiệu năng, xây dựng chức năng mới đến triển khai Production và hỗ trợ người dùng nghiệp vụ.</p>
 
-        <!-- KỸ NĂNG CÔNG NGHỆ -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            Công nghệ sử dụng
-          </h2>
+  <h2>Kinh nghiệm làm việc</h2>
+  <div class="entry">
+    <div class="row"><span class="org">Trung tâm Công nghệ Thông tin PVI</span><span>Hà Nội</span></div>
+    <div class="row"><span class="role">Lập trình viên Web/App Fullstack (chính thức từ 11/2024)</span><span>08/2024 – Hiện tại</span></div>
+    <ul>
+      <li>Phát triển, bảo trì và vận hành 4 hệ thống nghiệp vụ tái bảo hiểm phục vụ khách hàng ngành tái bảo hiểm; tự triển khai Production và phát hành ứng dụng lên App Store / Google Play.</li>
+      <li><b>App điều hành di động</b> (React Native + .NET API): chuyển tính toán báo cáo điều hành về Backend và lưu cache, giảm thời gian tải từ <b>hơn 1 phút</b> (có lúc không ra số liệu) xuống <b>1–2 giây</b>; số liệu cập nhật sau khoảng 5 phút thay vì 1 giờ. Xây dựng thêm trang quản trị import hàng loạt lịch họp và xem kết quả khảo sát.</li>
+      <li><b>Hệ thống bảng kê SOA</b> (Inward / Outward Statement of Account): vận hành hằng ngày, hỗ trợ đối soát số liệu phí, hoa hồng, bồi thường (Claim) và xử lý lỗi; xây dựng thêm chức năng nhập từng chứng từ đơn lẻ bên cạnh import Excel hàng loạt.</li>
+      <li><b>Web quản lý &amp; rà soát hợp đồng</b> (Treaty / Facultative): phụ trách chính phần trích xuất thông tin hợp đồng PDF bằng AI/OCR và ánh xạ vào các trường dữ liệu nghiệp vụ, giảm thao tác nhập liệu thủ công (đang kiểm thử).</li>
+      <li><b>Hệ thống nghiệp vụ lõi</b> (VB.NET): hỗ trợ vận hành phần mềm quản trị đơn nhận/nhượng tái, phí, bồi thường và kế toán tái bảo hiểm; xử lý sự cố và nâng cấp nhỏ theo yêu cầu nghiệp vụ.</li>
+      <li>Tự xây dựng công cụ <code>pre-push-tester</code> kiểm tra code trước khi đưa lên hệ thống chung: đối chiếu thay đổi theo yêu cầu, đánh giá phạm vi ảnh hưởng tới chức năng khác và kiểm tra lỗi ngầm / định dạng file.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">Rikkeisoft</span><span>Hà Nội</span></div>
+    <div class="row"><span class="role">Thực tập sinh Frontend Developer</span><span>12/2022 – 05/2023</span></div>
+    <ul><li>Phát triển giao diện Web bằng React, TypeScript; làm việc theo Scrum và coding convention của dự án Nhật Bản.</li></ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">MK Technology</span><span>Hà Nội</span></div>
+    <div class="row"><span class="role">Thực tập sinh Mobile Developer</span><span>04/2022 – 01/2023</span></div>
+    <ul><li>Lập trình chức năng ứng dụng di động kết nối REST API, kiểm thử trên thiết bị thật.</li></ul>
+  </div>
 
-          <div class="skill-group">
-            <div class="skill-cat">Backend &amp; lập trình</div>
-            <div class="skill-tags">
-              <span class="skill-tag highlight">.NET / ASP.NET</span>
-              <span class="skill-tag highlight">C#</span>
-              <span class="skill-tag">VB.NET</span>
-              <span class="skill-tag">Web API / MVC</span>
-              <span class="skill-tag">RESTful API</span>
-              <span class="skill-tag">Clean Architecture</span>
-            </div>
-          </div>
+  <h2>Học vấn</h2>
+  <div class="entry">
+    <div class="row"><span class="org">Đại học Bách Khoa Hà Nội</span><span>Hà Nội</span></div>
+    <div class="row"><span class="role">Kỹ sư Công nghệ thông tin, chương trình Việt - Nhật (HEDSPI)</span><span>2019 – 09/2024</span></div>
+    <ul><li>GPA 3.2/4 – Xếp loại Giỏi.</li></ul>
+  </div>
 
-          <div class="skill-group">
-            <div class="skill-cat">Frontend &amp; mobile</div>
-            <div class="skill-tags">
-              <span class="skill-tag highlight">React</span>
-              <span class="skill-tag highlight">TypeScript</span>
-              <span class="skill-tag">JavaScript (ES6+)</span>
-              <span class="skill-tag highlight">React Native</span>
-              <span class="skill-tag">HTML5 / CSS3 / SCSS</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-cat">Cơ sở dữ liệu</div>
-            <div class="skill-tags">
-              <span class="skill-tag highlight">Microsoft SQL Server</span>
-              <span class="skill-tag">Oracle Database</span>
-              <span class="skill-tag">Stored Procedures</span>
-              <span class="skill-tag">Tối ưu truy vấn &amp; chỉ mục</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-cat">Chất lượng &amp; công cụ</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Git / GitHub / GitLab</span>
-              <span class="skill-tag">Rà soát Git diff</span>
-              <span class="skill-tag">UTF-8 BOM / CRLF Standards</span>
-              <span class="skill-tag">Kiểm thử hồi quy</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- ỨNG DỤNG AI -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/></svg>
-            Ứng dụng AI vào công việc
-          </h2>
-          <div class="ai-box">
-            <strong>Nguyên tắc: AI trợ lực có kiểm chứng</strong><br>
-            • Hỗ trợ đọc hiểu nhanh luồng xử lý của các hệ thống mã nguồn kế thừa quy mô lớn.<br>
-            • Tạo các đoạn mã khung (boilerplate) và gợi ý kịch bản kiểm thử các trường hợp biên.<br>
-            • Xây dựng công cụ <code>pre-push-tester</code> tự động kiểm tra định dạng file và <code>git diff</code> trước khi đẩy code (pre-push).
-          </div>
-        </section>
-      </aside>
-
-      <!-- RIGHT MAIN CONTENT -->
-      <main class="content">
-        <!-- TỔNG QUAN NĂNG LỰC -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            Giới thiệu bản thân
-          </h2>
-          <p class="summary-text" style="margin-top: 5px;">
-            Kỹ sư phần mềm có nền tảng kỹ thuật vững chắc, tốt nghiệp chương trình Kỹ sư Công nghệ thông tin (xếp loại Giỏi) tại ĐH Bách Khoa Hà Nội, với <strong>2 năm kinh nghiệm thực tế phát triển phần mềm trong lĩnh vực bảo hiểm và tái bảo hiểm</strong> tại Trung tâm CNTT PVI. Tham gia phát triển, nâng cấp và bảo trì từ ứng dụng di động, Web Frontend đến Backend API và cơ sở dữ liệu; luôn đề cao tính chính xác, nhất quán của số liệu tài chính - kế toán.
-          </p>
-        </section>
-
-        <!-- KINH NGHIỆM LÀM VIỆC -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Kinh nghiệm làm việc
-          </h2>
-
-          <div class="timeline-entry">
-            <div class="job-header">
-              <span class="job-title">Web/App Fullstack Developer</span>
-              <span class="job-period">08/2024 - Hiện tại</span>
-            </div>
-            <div class="job-company">Trung tâm Công nghệ Thông tin PVI (Chính thức từ 11/2024)</div>
-            <ul class="job-bullets">
-              <li>Tham gia phát triển và bảo trì thường xuyên <strong>4 hệ thống phần mềm nghiệp vụ</strong>; trực tiếp xây dựng và hoàn thiện <strong>hơn 20 chức năng, màn hình nghiệp vụ và RESTful API</strong> phục vụ công tác tái bảo hiểm.</li>
-              <li>Phát triển dịch vụ Backend và tối ưu hóa các truy vấn, thủ tục xử lý dữ liệu trên cơ sở dữ liệu quan hệ, giúp cải thiện tốc độ kết xuất báo cáo và đối soát công nợ định kỳ.</li>
-              <li>Xây dựng giao diện Web và ứng dụng di động, tối ưu tốc độ phản hồi của giao diện và hỗ trợ triển khai vận hành thực tế (Production) cho các đơn vị nghiệp vụ.</li>
-              <li>Ứng dụng công cụ AI và xây dựng quy trình kiểm tra tự động trước khi đẩy code (pre-push), giảm thiểu lỗi định dạng và sai sót logic khi hợp nhất mã nguồn.</li>
-            </ul>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="job-header">
-              <span class="job-title">Thực tập sinh Frontend Developer</span>
-              <span class="job-period">12/2022 - 05/2023</span>
-            </div>
-            <div class="job-company">Rikkeisoft &bull; Môi trường phát triển chuẩn Nhật Bản</div>
-            <ul class="job-bullets">
-              <li>Phát triển giao diện Web bằng React, TypeScript, tuân thủ nghiêm ngặt quy chuẩn mã nguồn (Coding Conventions) và quy trình làm việc Agile/Scrum.</li>
-            </ul>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="job-header">
-              <span class="job-title">Thực tập sinh Mobile Developer</span>
-              <span class="job-period">2022</span>
-            </div>
-            <div class="job-company">MK Technology &bull; Giải pháp thẻ thông minh &amp; bảo mật</div>
-            <ul class="job-bullets">
-              <li>Tham gia lập trình các chức năng ứng dụng di động kết nối REST API, xử lý bất đồng bộ và kiểm thử trên thiết bị thực tế.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- KINH NGHIỆM VỚI 4 HỆ THỐNG NGHIỆP VỤ -->
-        <section>
-          <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            Tham gia phát triển, bảo trì 4 hệ thống nghiệp vụ quan trọng
-          </h2>
-
-          <div class="systems-grid">
-            <div class="system-card">
-              <div class="system-name">
-                <span>1. Ứng dụng ReSmart</span>
-                <span class="system-tech">Phát triển &amp; Nâng cấp</span>
-              </div>
-              <p class="system-desc">
-                Ứng dụng điều hành trên thiết bị di động (Production): Hỗ trợ lãnh đạo và cán bộ nghiệp vụ tra cứu nhanh thông tin hợp đồng, hồ sơ bồi thường, theo dõi báo cáo công nợ và thực hiện phê duyệt điện tử từ xa.
-              </p>
-            </div>
-
-            <div class="system-card">
-              <div class="system-name">
-                <span>2. Hệ thống SOA điện tử</span>
-                <span class="system-tech">Nâng cấp &amp; Bảo trì</span>
-              </div>
-              <p class="system-desc">
-                Hệ thống quản lý bảng kê và đối soát công nợ (Production): Hỗ trợ số hóa quy trình lập bảng kê tài khoản, nạp dữ liệu theo biểu mẫu, đối soát số liệu đa chiều và theo dõi tiến độ thanh toán.
-              </p>
-            </div>
-
-            <div class="system-card">
-              <div class="system-name">
-                <span>3. Web Contract Review</span>
-                <span class="system-tech">Phát triển mới</span>
-              </div>
-              <p class="system-desc">
-                Hệ thống quản lý và rà soát hợp đồng (Dự án hiện đại hóa): Chuẩn hóa quy trình tiếp nhận, rà soát điều khoản hợp đồng tái bảo hiểm; nghiên cứu tích hợp xem tài liệu trực tuyến và thử nghiệm bóc tách thông tin tự động (AI/OCR).
-              </p>
-            </div>
-
-            <div class="system-card">
-              <div class="system-name">
-                <span>4. Hệ thống PVIRe2022</span>
-                <span class="system-tech">Bảo trì &amp; Vận hành</span>
-              </div>
-              <p class="system-desc">
-                Hệ thống quản trị nghiệp vụ lõi (Production): Duy trì sự ổn định của phần mềm quản trị nghiệp vụ tái bảo hiểm kế thừa, hỗ trợ xử lý yêu cầu phát sinh và tối ưu hóa kết xuất báo cáo định kỳ.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+  <h2>Kỹ năng &amp; ngoại ngữ</h2>
+  <div class="skills">
+    <p><b>Lập trình:</b> C#, ASP.NET Web API, VB.NET, React Native, React, TypeScript, RESTful API.</p>
+    <p><b>Cơ sở dữ liệu:</b> SQL Server, Stored Procedures, tối ưu truy vấn báo cáo.</p>
+    <p><b>Vận hành:</b> Deploy Production, phát hành App Store / Google Play, hỗ trợ người dùng và xử lý sự cố, Git / GitLab.</p>
+    <p><b>AI:</b> Trích xuất tài liệu PDF bằng AI/OCR; dùng AI agent để đọc mã nguồn và kiểm tra code, luôn tự kiểm chứng kết quả.</p>
+    <p><b>Ngoại ngữ:</b> Tiếng Anh giao tiếp, đọc hiểu tài liệu kỹ thuật; Tiếng Nhật JLPT N3 (2022).</p>
   </div>
 </body>
 </html>
